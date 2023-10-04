@@ -11,13 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: "runtime-upgrade-action"
-      - name: Run docker action and set output for testing
+      - name: Upgrade runtime
         uses: ./
-        id: run-docker
         with:
-          image: docker:20.10.3
-          run: |
-            echo "::set-output name=docker-version::`echo $DOCKER_VERSION`"
+          mnemonic: 'asd asd asd qwe asd zxc asd qwe'
+          rpc_url: 'wss://mychain.com'
+          wasm_file: '/runtime.wasm'
       

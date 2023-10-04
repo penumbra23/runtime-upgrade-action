@@ -1,8 +1,18 @@
-name: 'Docker Run Action'
-description: 'Run a command in a new container'
+name: 'Substrate Runtime Upgrade'
+description: 'Upgrades a Substrate chain runtime'
 inputs:
   image:
     description: 'Image'
+    required: true
+    default: 'penumbra23/runtime-upgrade:latest'
+  mnemonic:
+    description: 'Sudo account mnemonic'
+    required: true
+  wasm_file:
+    description: 'Path to the WASM file'
+    required: true
+  rpc_url:
+    description: 'URL to the RPC node'
     required: true
 runs:
   using: 'docker'
