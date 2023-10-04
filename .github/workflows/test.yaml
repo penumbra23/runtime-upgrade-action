@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          path: "runtime-upgrade-action"
       - name: Run docker action and set output for testing
         uses: ./
         id: run-docker
