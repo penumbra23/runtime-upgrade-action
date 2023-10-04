@@ -15,7 +15,7 @@ jobs:
         uses: ./
         id: run-docker
         with:
-          image: debian
+          image: docker:20.10.3
           run: |
             echo "::set-output name=docker-version::`echo $DOCKER_VERSION`"
       
