@@ -1,0 +1,9 @@
+name: 'Docker Run Action'
+description: 'Run a command in a new container'
+inputs:
+  image:
+    description: 'Image'
+    required: true
+runs:
+  using: 'docker'
+  image: 'debian'
